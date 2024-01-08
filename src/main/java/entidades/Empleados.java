@@ -1,5 +1,7 @@
 package entidades;
 
+import jakarta.persistence.Column;
+
 import java.math.BigDecimal;
 import java.sql.Date;
 
@@ -12,6 +14,7 @@ public class Empleados {
     private Date fechaContratacion;
     private String idTrabajo;
     private BigDecimal salario;
+
     private BigDecimal comision;
     private Integer idDirector;
     private Integer idDepartamento;

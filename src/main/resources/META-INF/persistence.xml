@@ -5,5 +5,24 @@
              version="3.0">
     <persistence-unit name="default">
 
+        <mapping-file>Localizaciones.xml</mapping-file>
+        <properties>
+            <property name="toplink.jdbc.url" value="jdbc:mysql://192.168.56.101:3306/empleados"/>
+            <property name="toplink.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="toplink.jdbc.user" value="admin00"/>
+            <property name="toplink.jdbc.password" value="alumno"/>
+            <property name="hibernate.connection.url" value="jdbc:mysql://192.168.56.101:3306/empleados"/>
+            <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="hibernate.connection.username" value="admin00"/>
+            <property name="hibernate.connection.password" value="alumno"/>
+            <property name="openjpa.ConnectionURL" value="jdbc:mysql://192.168.56.101:3306/empleados"/>
+            <property name="openjpa.ConnectionDriverName" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="openjpa.ConnectionUserName" value="admin00"/>
+            <property name="openjpa.ConnectionPassword" value="alumno"/>
+            <property name="eclipselink.jdbc.url" value="jdbc:mysql://192.168.56.101:3306/empleados"/>
+            <property name="eclipselink.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="eclipselink.jdbc.user" value="admin00"/>
+            <property name="eclipselink.jdbc.password" value="alumno"/>
+        </properties>
     </persistence-unit>
 </persistence>

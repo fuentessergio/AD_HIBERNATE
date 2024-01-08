@@ -12,7 +12,7 @@
             <column name="nombre_departamento" sql-type="varchar(30)" length="30"/>
         </property>
         <property name="idDirector">
-            <column name="id_director" sql-type="int" not-null="true"/>
+            <column name="id_director" sql-type="int" not-null="false"/>
         </property>
         <property name="idLocalizacion">
             <column name="id_localizacion" sql-type="int" not-null="true"/>

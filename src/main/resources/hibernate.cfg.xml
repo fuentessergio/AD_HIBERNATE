@@ -8,9 +8,10 @@
     <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
       <property name="connection.username">admin00</property>
       <property name="connection.password">alumno</property>
-      <mapping resource="Departamentos.hbm.xml"/>
+    <mapping resource="Departamentos.hbm.xml"/>
       <mapping resource="Empleados.hbm.xml"/>
-      <!-- <property name="connection.username"/> -->
+    <mapping resource="Localizaciones.hbm.xml"/>
+    <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 
     <!-- DB schema will be updated if needed -->
