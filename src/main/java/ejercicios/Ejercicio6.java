@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class Ejercicio6 {
     public static void main(String[] args) {
         SessionFactory sessionFactory = SessionFactoryUtil.getSessionFactory();
-        int[] idsEmpleados = {202, 301, 702, 502, 420};  // Ejemplo de IDs de empleados
+        int[] idsEmpleados = {202, 301, 302, 502, 420};  // Ejemplo de IDs de empleados
 
         try (Session session = sessionFactory.openSession()){
             ArrayList<Empleados> empleados = new ArrayList<>();

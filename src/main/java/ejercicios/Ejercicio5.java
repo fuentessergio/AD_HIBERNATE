@@ -35,6 +35,7 @@ public class Ejercicio5 {
                 throw new EmpleadoNoEncontradoException();
             }
             return empleado;
+
         }catch (Exception e){
             e.printStackTrace();
             return null;

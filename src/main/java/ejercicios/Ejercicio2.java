@@ -29,12 +29,12 @@ public class Ejercicio2 {
 
             for (int i = 0; i <= 5; i++) {
                 Empleados empleado = new Empleados();
-                empleado.setIdEmpleado(900 + i);
+                empleado.setIdEmpleado(1000 + i);
                 empleado.setNombre("Nombre " + i);
                 empleado.setApellido("Apellido " + i);
                 empleado.setEmail("email" + i + "@example.com");
                 empleado.setTelefono("123456789");
-                empleado.setFechaContratacion(new Date(1987, 6, 17));
+                empleado.setFechaContratacion(Date.valueOf("1987-6-17")); // new date esta obsoleto
                 empleado.setIdTrabajo(idTrabajo);
                 empleado.setSalario(new BigDecimal("1000"));
                 empleado.setComision(new BigDecimal("0.10"));
@@ -46,7 +46,12 @@ public class Ejercicio2 {
             transaction.commit();
         }catch (Throwable t){
             if (transaction != null) {
-                transaction.rollback();
+                try {
+                    transaction.rollback();
+                    System.out.println("La transacción se ha revertido debido a un error. Mensaje: " + t.getMessage());
+                } catch (Exception rollbackException) {
+                    System.err.println("Error al revertir la transacción: " + rollbackException.getMessage());
+                }
             }
             System.err.println("ERROR: " + t.getCause() + " " + t.getMessage());
         } finally {

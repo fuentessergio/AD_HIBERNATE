@@ -19,15 +19,21 @@ public class Ejercicio4 {
         SessionFactory sessionFactory = SessionFactoryUtil.getSessionFactory();
         Session session = sessionFactory.openSession();
 
-        Departamentos departamento80 = session.get(Departamentos.class,80);
+        Departamentos departamento80 = session.get(Departamentos.class,60);
         Transaction transaction = null;
+
         try {
             transaction = session.beginTransaction();
             session.delete(departamento80);
             transaction.commit();
         }catch (Throwable t){
             if (transaction != null) {
-                transaction.rollback();
+                try {
+                    transaction.rollback();
+                    System.out.println("La transacción se ha revertido debido a un error. Mensaje: " + t.getMessage());
+                } catch (Exception rollbackException) {
+                    System.err.println("Error al revertir la transacción: " + rollbackException.getMessage());
+                }
             }
             System.err.println("ERROR: " + t.getCause() + " " + t.getMessage());
         } finally {

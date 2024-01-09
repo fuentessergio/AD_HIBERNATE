@@ -39,7 +39,12 @@ public class Ejercicio3 {
 
             } catch (Throwable t) {
                 if (transaction != null) {
-                    transaction.rollback();
+                    try {
+                        transaction.rollback();
+                        System.out.println("La transacción se ha revertido debido a un error. Mensaje: " + t.getMessage());
+                    } catch (Exception rollbackException) {
+                        System.err.println("Error al revertir la transacción: " + rollbackException.getMessage());
+                    }
                 }
                 System.err.println("ERROR: " + t.getCause() + " " + t.getMessage());
             }
