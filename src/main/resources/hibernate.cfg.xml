@@ -11,7 +11,8 @@
     <mapping resource="Departamentos.hbm.xml"/>
       <mapping resource="Empleados.hbm.xml"/>
     <mapping resource="Localizaciones.hbm.xml"/>
-    <!-- <property name="connection.username"/> -->
+      <mapping resource="HistorialTrab.hbm.xml"/>
+      <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 
     <!-- DB schema will be updated if needed -->
