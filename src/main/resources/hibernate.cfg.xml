@@ -8,6 +8,8 @@
     <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
       <property name="connection.username">admin00</property>
       <property name="connection.password">alumno</property>
+    <property name="hibernate.show_sql">true</property>
+
     <mapping resource="Departamentos.hbm.xml"/>
       <mapping resource="Empleados.hbm.xml"/>
     <mapping resource="Localizaciones.hbm.xml"/>
